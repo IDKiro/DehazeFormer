@@ -1,0 +1,11 @@
+{
+    "batch_size": 32,
+    "patch_size": 256,
+    "valid_mode": "test",
+    "edge_decay": 0,
+    "only_h_flip": false,
+    "optimizer": "adamw",
+    "lr": 4e-4,
+    "epochs":300,
+    "eval_freq": 1
+}
