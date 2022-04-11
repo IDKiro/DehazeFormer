@@ -1,6 +1,6 @@
 # Vision Transformers for Single Image Dehazing
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]() [![Datasets](https://img.shields.io/badge/Dataset-GoogleDrive-blue)](https://drive.google.com/drive/folders/1oaQSpdYHxEv-nMOB7yCLKfw2NDCJVtrx?usp=sharing) 
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2204.03883) [![Datasets](https://img.shields.io/badge/Dataset-GoogleDrive-blue)](https://drive.google.com/drive/folders/1oaQSpdYHxEv-nMOB7yCLKfw2NDCJVtrx?usp=sharing) 
 [![Pretrained Models](https://img.shields.io/badge/Pretrained%20Models-GoogleDrive-blue)](https://drive.google.com/drive/folders/1gnQiI_7Dvy-ZdQUVYXt7pW0EFQkpK39B?usp=sharing)
 
 > **Abstract:** 
@@ -19,7 +19,8 @@ We also collect a large-scale realistic remote sensing dehazing dataset for eval
 ![DehazeFormer](figs/arch.png)
 
 ### News
-- **Apr 7, 2022:** Beta version is released, including train & test codes, pre-trained models, and RS-Haze-RGB.
+- **Apr 11, 2022:** Arxiv paper link is updated.
+- **Apr 7, 2022:** Beta version is released, including codes, pre-trained models, and RS-Haze-RGB.
 
 ## Getting started
 
@@ -119,5 +120,4 @@ python predict.py --model dehazeformer-b --folder RESIDE-IN/test/hazy --exp indo
 ## Notes
 
 1. Currently, this repository provides roughly organized code, please send me an email (syd@zju.edu.cn) if you find problems. 
-2. Some questions such as how to run the code may not be answered, and please do not open such issues.
-3. We found that the test results using opencv installed with conda are lower than those using opencv installed with pypi (RESIDE-OUT, RESIDE-6K), since they call different JPEG image codecs.
+2. We found that the test results using opencv installed with conda are lower than those using opencv installed with pypi (RESIDE-OUT, RESIDE-6K), since they call different JPEG image codecs.
