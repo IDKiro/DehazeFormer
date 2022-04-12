@@ -501,6 +501,16 @@ def dehazeformer_t():
 		conv_type=['DWConv', 'DWConv', 'DWConv', 'DWConv', 'DWConv'])
 
 
+def dehazeformer_s():
+    return DehazeFormer(
+		embed_dims=[24, 48, 96, 48, 24],
+		mlp_ratios=[2., 4., 4., 2., 2.],
+		depths=[8, 8, 8, 4, 4],
+		num_heads=[2, 4, 6, 1, 1],
+		attn_ratio=[1/4, 1/2, 3/4, 0, 0],
+		conv_type=['DWConv', 'DWConv', 'DWConv', 'DWConv', 'DWConv'])
+
+
 def dehazeformer_b():
     return DehazeFormer(
         embed_dims=[24, 48, 96, 48, 24],
@@ -511,11 +521,11 @@ def dehazeformer_b():
 		conv_type=['DWConv', 'DWConv', 'DWConv', 'DWConv', 'DWConv'])
 
 
-def dehazeformer_s():
+def dehazeformer_w():
     return DehazeFormer(
-		embed_dims=[24, 48, 96, 48, 24],
+        embed_dims=[48, 96, 192, 96, 48],
 		mlp_ratios=[2., 4., 4., 2., 2.],
-		depths=[8, 8, 8, 4, 4],
+		depths=[16, 16, 16, 8, 8],
 		num_heads=[2, 4, 6, 1, 1],
 		attn_ratio=[1/4, 1/2, 3/4, 0, 0],
 		conv_type=['DWConv', 'DWConv', 'DWConv', 'DWConv', 'DWConv'])

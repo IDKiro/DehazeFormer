@@ -19,6 +19,8 @@ We also collect a large-scale realistic remote sensing dehazing dataset for eval
 ![DehazeFormer](figs/arch.png)
 
 ### News
+
+- **Apr 12, 2022:** Add a new variant named DehazeFormer-W with 39.19 dB (SOTS indoor) / 9.68M #Param / 94.43G MACs.
 - **Apr 11, 2022:** Arxiv paper link is updated.
 - **Apr 7, 2022:** Beta version is released, including codes, pre-trained models, and RS-Haze-RGB.
 
