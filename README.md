@@ -1,7 +1,8 @@
 # Vision Transformers for Single Image Dehazing
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2204.03883) [![Datasets](https://img.shields.io/badge/Dataset-GoogleDrive-blue)](https://drive.google.com/drive/folders/1oaQSpdYHxEv-nMOB7yCLKfw2NDCJVtrx?usp=sharing) 
-[![Pretrained Models](https://img.shields.io/badge/Pretrained%20Models-GoogleDrive-blue)](https://drive.google.com/drive/folders/1gnQiI_7Dvy-ZdQUVYXt7pW0EFQkpK39B?usp=sharing)
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2204.03883) [![Datasets](https://img.shields.io/badge/GoogleDrive-Datasets-blue)](https://drive.google.com/drive/folders/1oaQSpdYHxEv-nMOB7yCLKfw2NDCJVtrx?usp=sharing) 
+[![Pretrained Models](https://img.shields.io/badge/GoogleDrive-Pretrained%20Models-blue)](https://drive.google.com/drive/folders/1gnQiI_7Dvy-ZdQUVYXt7pW0EFQkpK39B?usp=sharing)
+[![BaiduPan](https://img.shields.io/badge/BaiduPan-gtuw-orange)](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw)
 
 > **Abstract:** 
 Image dehazing is a representative low-level vision task that estimates latent haze-free images from hazy images.
@@ -20,7 +21,7 @@ We also collect a large-scale realistic remote sensing dehazing dataset for eval
 
 ### News
 
-- **Apr 12, 2022:** Add a new variant named DehazeFormer-W with 39.19 dB (SOTS indoor) / 9.68M #Param / 94.43G MACs.
+- **Apr 12, 2022:** Add a new variant named DehazeFormer-W with 39.19 dB (SOTS indoor) / 9.68M #Param / 94.43G MACs. BaiduPan link is updated.
 - **Apr 11, 2022:** Arxiv paper link is updated.
 - **Apr 7, 2022:** Beta version is released, including codes, pre-trained models, and RS-Haze-RGB.
 
@@ -44,7 +45,7 @@ pip install -r requirements.txt
 
 ### Download
 
-You can download the pretrained models and datasets on [GoogleDrive](https://drive.google.com/drive/folders/1Yy_GH6_bydYPU6_JJzFQwig4LTh86VI4?usp=sharing).
+You can download the pretrained models and datasets on [GoogleDrive](https://drive.google.com/drive/folders/1Yy_GH6_bydYPU6_JJzFQwig4LTh86VI4?usp=sharing) or [BaiduPan](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw) (gtuw).
 
 Currently, we only provide gamma-corrected RGB images of our RS-Haze dataset.
 
