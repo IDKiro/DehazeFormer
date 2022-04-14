@@ -123,4 +123,6 @@ python predict.py --model dehazeformer-b --folder RESIDE-IN/test/hazy --exp indo
 ## Notes
 
 1. Currently, this repository provides roughly organized code, please send me an email (syd@zju.edu.cn) if you find problems. 
-2. We found that the test results using opencv installed with conda are lower than those using opencv installed with pypi (RESIDE-OUT, RESIDE-6K), since they call different JPEG image codecs.
+2. We found that the test results (RESIDE-OUT, RESIDE-6K) using opencv installed with conda are lower than pypi since they call different JPEG image codecs.
+3. Unfortunately, because the synthetic dataset is not realistic enough (especially the RESIDE outdoor), the trained models (baselines and DehazeFormers) may not work well on real hazy images.
+4. We are so sorry that we have no plans to release the code for the synthetic dataset method and MS images shortly.
