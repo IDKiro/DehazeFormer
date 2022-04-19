@@ -126,3 +126,17 @@ python predict.py --model dehazeformer-b --folder RESIDE-IN/test/hazy --exp indo
 2. We found that the test results (RESIDE-OUT, RESIDE-6K) using opencv installed with conda are lower than pypi since they call different JPEG image codecs.
 3. Unfortunately, because the synthetic dataset is not realistic enough (especially the RESIDE outdoor), the trained models (baselines and DehazeFormers) may not work well on real hazy images.
 4. We are so sorry that we have no plans to release the code for the synthetic dataset method and MS images shortly.
+
+
+## Citation
+
+If you find this work useful for your research, please cite our paper:
+
+```bibtex
+@article{song2022vision,
+  title={Vision Transformers for Single Image Dehazing},
+  author={Song, Yuda and He, Zhuqing and Qian, Hui and Du, Xin},
+  journal={arXiv preprint arXiv:2204.03883},
+  year={2022}
+}
+```
