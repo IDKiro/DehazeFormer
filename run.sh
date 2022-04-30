@@ -4,6 +4,7 @@ python test.py --model dehazeformer-t --dataset RESIDE-IN --exp indoor
 python test.py --model dehazeformer-s --dataset RESIDE-IN --exp indoor
 python test.py --model dehazeformer-b --dataset RESIDE-IN --exp indoor
 python test.py --model dehazeformer-w --dataset RESIDE-IN --exp indoor
+python test.py --model dehazeformer-d --dataset RESIDE-IN --exp indoor
 python test.py --model dehazeformer-m --dataset RESIDE-IN --exp indoor
 python test.py --model dehazeformer-l --dataset RESIDE-IN --exp indoor
 
