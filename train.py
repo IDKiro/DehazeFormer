@@ -4,6 +4,8 @@ import json
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import wandb
+
 from torch.cuda.amp import autocast, GradScaler
 from torch.utils.data import DataLoader
 from tensorboardX import SummaryWriter
@@ -24,9 +26,20 @@ parser.add_argument('--log_dir', default='./logs/', type=str, help='path to logs
 parser.add_argument('--dataset', default='RESIDE-IN', type=str, help='dataset name')
 parser.add_argument('--exp', default='indoor', type=str, help='experiment setting')
 parser.add_argument('--gpu', default='0,1,2,3', type=str, help='GPUs used for training')
+parser.add_argument('--wandb', action='store_true', default=False, help='')
+parser.add_argument('--run_name', type=str, default='test_confidence', help='')
 args = parser.parse_args()
 
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+
+if args.wandb:
+	wandb.init(
+		entity='10701',
+		settings=wandb.Settings(start_method="fork"),
+		project='Image Dehazing',
+		name=args.run_name,
+		config=args
+	)
 
 
 def train(train_loader, network, criterion, optimizer, scaler):
@@ -43,6 +56,7 @@ def train(train_loader, network, criterion, optimizer, scaler):
 		with autocast(args.no_autocast):
 			output = network(source_img)
 			loss = criterion(output, target_img)
+			wandb.log({"loss": loss})
 
 		losses.update(loss.item())
 
@@ -69,9 +83,10 @@ def valid(val_loader, network):
 			output = network(source_img).clamp_(-1, 1)		
 
 		mse_loss = F.mse_loss(output * 0.5 + 0.5, target_img * 0.5 + 0.5, reduction='none').mean((1, 2, 3))
+		wandb.log({"val_mse_loss": loss})
 		psnr = 10 * torch.log10(1 / mse_loss).mean()
 		PSNR.update(psnr.item(), source_img.size(0))
-
+		wandb.log({"val_psnr": loss})
 	return PSNR.avg
 
 
@@ -81,8 +96,9 @@ if __name__ == '__main__':
 		setting_filename = os.path.join('configs', args.exp, 'default.json')
 	with open(setting_filename, 'r') as f:
 		setting = json.load(f)
-
+	wandb.config = setting
 	network = eval(args.model.replace('-', '_'))()
+	wandb.watch(network)
 	network = nn.DataParallel(network).cuda()
 
 	criterion = nn.L1Loss()
