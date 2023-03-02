@@ -1,8 +1,10 @@
 # Vision Transformers for Single Image Dehazing
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2204.03883) [![Dataset](https://img.shields.io/badge/GoogleDrive-Dataset-blue)](https://drive.google.com/drive/folders/1oaQSpdYHxEv-nMOB7yCLKfw2NDCJVtrx?usp=sharing) 
-[![Model](https://img.shields.io/badge/GoogleDrive-Weight-blue)](https://drive.google.com/drive/folders/1gnQiI_7Dvy-ZdQUVYXt7pW0EFQkpK39B?usp=sharing)
-[![BaiduPan](https://img.shields.io/badge/BaiduPan-Backup-orange)](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw)
+[![Demo](https://img.shields.io/badge/Demo-Hugging%20Face-gold)](https://huggingface.co/spaces/IDKiro/DehazeFormer_Demo)
+[![Paper](https://img.shields.io/badge/Paper-IEEE%20TIP-green)]() 
+[![Paper2](https://img.shields.io/badge/Paper-arXiv-green)](https://arxiv.org/abs/2204.03883) 
+[![GoogleDrive](https://img.shields.io/badge/Data-GoogleDrive-lightgrey)](https://drive.google.com/drive/folders/1Yy_GH6_bydYPU6_JJzFQwig4LTh86VI4?usp=sharing)
+[![BaiduPan](https://img.shields.io/badge/Backup-BaiduPan-lightgrey)](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw)
 
 > **Abstract:** 
 Image dehazing is a representative low-level vision task that estimates latent haze-free images from hazy images.
@@ -21,10 +23,13 @@ We also collect a large-scale realistic remote sensing dehazing dataset for eval
 
 ### News
 
+- **Mar 06, 2023:** Hugging Face [demo](https://huggingface.co/spaces/IDKiro/DehazeFormer_Demo) is updated. It is a [MCT](https://github.com/IDKiro/MCT) variant trained with a mixed dataset.
+- **Feb 25, 2023:** IEEE TIP accepts our paper. The [final version]() adds some experiments.
+- **Sep 23, 2022:** We release [gUNet](https://github.com/IDKiro/gUNet) with better training code.
 - **Apr 30, 2022:** Add DehazeFormer-D with 39.43 dB (SOTS indoor) / 4.98M #Param / 51.09G MACs.
-- **Apr 12, 2022:** Add DehazeFormer-W with 39.19 dB (SOTS indoor) / 9.68M #Param / 94.43G MACs. BaiduPan link is updated.
-- **Apr 11, 2022:** Arxiv paper link is updated.
-- **Apr 7, 2022:** Beta version is released, including codes, pre-trained models, and RS-Haze-RGB.
+- **Apr 12, 2022:** Add DehazeFormer-W with 39.19 dB (SOTS indoor) / 9.68M #Param / 94.43G MACs. 
+- **Apr 11, 2022:** [Arxiv paper](https://arxiv.org/abs/2204.03883) link is updated. [BaiduPan link](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw) is updated.
+- **Apr 07, 2022:** Beta version is released, including codes, [pre-trained models](https://drive.google.com/drive/folders/1gnQiI_7Dvy-ZdQUVYXt7pW0EFQkpK39B?usp=sharing), and [RS-Haze-RGB](https://drive.google.com/drive/folders/1oaQSpdYHxEv-nMOB7yCLKfw2NDCJVtrx?usp=sharing).
 
 ## Getting started
 
@@ -134,10 +139,10 @@ python predict.py --model dehazeformer-b --folder RESIDE-IN/test/hazy --exp indo
 If you find this work useful for your research, please cite our paper:
 
 ```bibtex
-@article{song2022vision,
+@article{song2023vision,
   title={Vision Transformers for Single Image Dehazing},
   author={Song, Yuda and He, Zhuqing and Qian, Hui and Du, Xin},
-  journal={arXiv preprint arXiv:2204.03883},
-  year={2022}
+  journal={IEEE Transactions on Image Processing},
+  year={2023}
 }
 ```
