@@ -1,10 +1,10 @@
 # Vision Transformers for Single Image Dehazing
 
 [![Demo](https://img.shields.io/badge/Demo-Hugging%20Face-gold)](https://huggingface.co/spaces/IDKiro/DehazeFormer_Demo)
-[![Paper](https://img.shields.io/badge/Paper-IEEE%20TIP-green)]() 
-[![Paper2](https://img.shields.io/badge/Paper-arXiv-green)](https://arxiv.org/abs/2204.03883) 
-[![GoogleDrive](https://img.shields.io/badge/Data-GoogleDrive-lightgrey)](https://drive.google.com/drive/folders/1Yy_GH6_bydYPU6_JJzFQwig4LTh86VI4?usp=sharing)
-[![BaiduPan](https://img.shields.io/badge/Backup-BaiduPan-lightgrey)](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw)
+[![Paper](https://img.shields.io/badge/Paper-IEEE%20TIP-blue)]() 
+[![Paper2](https://img.shields.io/badge/Paper-arXiv-blue)](https://arxiv.org/abs/2204.03883) 
+[![GoogleDrive](https://img.shields.io/badge/Data-GoogleDrive-brightgreen)](https://drive.google.com/drive/folders/1Yy_GH6_bydYPU6_JJzFQwig4LTh86VI4?usp=sharing)
+[![BaiduPan](https://img.shields.io/badge/Data-BaiduPan-brightgreen)](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw)
 
 > **Abstract:** 
 Image dehazing is a representative low-level vision task that estimates latent haze-free images from hazy images.
@@ -17,18 +17,16 @@ Specifically, on the most frequently used SOTS indoor set, our small model outpe
 To the best of our knowledge, our large model is the first method with the PSNR over 40 dB on the SOTS indoor set, dramatically outperforming the previous state-of-the-art methods.
 We also collect a large-scale realistic remote sensing dehazing dataset for evaluating the method's capability to remove highly non-homogeneous haze.
 
-### Network Architecture
-
 ![DehazeFormer](figs/arch.png)
 
-### News
+## News
 
 - **Mar 06, 2023:** Hugging Face [demo](https://huggingface.co/spaces/IDKiro/DehazeFormer_Demo) is updated. It is a [MCT](https://github.com/IDKiro/MCT) variant trained with a mixed dataset.
-- **Feb 25, 2023:** IEEE TIP accepts our paper. The [final version]() adds some experiments.
+- **Feb 25, 2023:** Paper accepted by IEEE TIP. The [final version]() adds some experiments.
 - **Sep 23, 2022:** We release [gUNet](https://github.com/IDKiro/gUNet) with better training code.
 - **Apr 30, 2022:** Add DehazeFormer-D with 39.43 dB (SOTS indoor) / 4.98M #Param / 51.09G MACs.
 - **Apr 12, 2022:** Add DehazeFormer-W with 39.19 dB (SOTS indoor) / 9.68M #Param / 94.43G MACs. 
-- **Apr 11, 2022:** [Arxiv paper](https://arxiv.org/abs/2204.03883) link is updated. [BaiduPan link](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw) is updated.
+- **Apr 11, 2022:** [Arxiv paper link](https://arxiv.org/abs/2204.03883) is updated. [BaiduPan link](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw) is updated.
 - **Apr 07, 2022:** Beta version is released, including codes, [pre-trained models](https://drive.google.com/drive/folders/1gnQiI_7Dvy-ZdQUVYXt7pW0EFQkpK39B?usp=sharing), and [RS-Haze-RGB](https://drive.google.com/drive/folders/1oaQSpdYHxEv-nMOB7yCLKfw2NDCJVtrx?usp=sharing).
 
 ## Getting started
@@ -112,26 +110,15 @@ python test.py --model dehazeformer-b --dataset RESIDE-IN --exp indoor
 
 Main test scripts can be found in `run.sh`.
 
-### Predict
-
-Run the following script to fetch the results:
-
-```sh
-python predict.py --model (model name) --folder (folder name) --exp (exp name)
-```
-
-For example, we fetch the results of DehazeFormer-B on the SOTS indoor set:
-
-```sh
-python predict.py --model dehazeformer-b --folder RESIDE-IN/test/hazy --exp indoor
-```
 
 ## Notes
 
-1. Currently, this repository provides roughly organized code, please send me an email (syd@zju.edu.cn) if you find problems. 
-2. We found that the test results (RESIDE-OUT, RESIDE-6K) using opencv installed with conda are lower than pypi since they call different JPEG image codecs.
-3. Unfortunately, because the synthetic dataset is not realistic enough (especially the RESIDE outdoor), the trained models (baselines and DehazeFormers) may not work well on real hazy images.
-4. We are so sorry that we have no plans to release the code for the synthetic dataset method and MS images shortly.
+1. Send email to syd@zju.edu.cn if you have critical issues to be addressed.
+2. Test results using opencv installed with conda are lower than pypi since they call different JPEG image codecs.
+3. Because the synthetic dataset is not realistic enough, the trained models may not work well on real hazy images.
+4. Refer to [two-branch](https://github.com/liuh127/NTIRE-2021-Dehazing-Two-branch) and modify the hyperparameters to train the model on real datasets.
+5. Use the mixed dataset for training to obtain good dehazing results for real-world hazy images.
+6. The code for the synthetic dataset method and MS images will be released by another author.
 
 
 ## Citation
