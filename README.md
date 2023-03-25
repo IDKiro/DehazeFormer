@@ -128,6 +128,8 @@ If you find this work useful for your research, please cite our paper:
   title={Vision Transformers for Single Image Dehazing},
   author={Song, Yuda and He, Zhuqing and Qian, Hui and Du, Xin},
   journal={IEEE Transactions on Image Processing},
-  year={2023}
+  year={2023},
+  volume={32},
+  pages={1927-1941}
 }
 ```
