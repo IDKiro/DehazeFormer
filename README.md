@@ -116,7 +116,7 @@ Main test scripts can be found in `run.sh`.
 3. Because the synthetic dataset is not realistic enough, the trained models may not work well on real hazy images.
 4. Refer to [two-branch](https://github.com/liuh127/NTIRE-2021-Dehazing-Two-branch) and modify the hyperparameters to train the model on real datasets.
 5. Use the mixed dataset for training to obtain good dehazing results for real-world hazy images.
-6. The code for the synthetic dataset method and MS images will be released by another author.
+6. Get the code for the synthetic dataset method and MS images in [another repository](https://github.com/zhuqinghe/RS-Haze).
 
 
 ## Citation
